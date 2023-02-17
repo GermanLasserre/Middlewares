@@ -15,6 +15,10 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(cookieParser());
 
+// ************ Middlewares - (touch) ************
+const userLogs = require('./middlewares/userLogs');
+app.use(userLogs)
+
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
 app.set('views', './src/views'); // Seteo de la ubicación de la carpeta "views"
@@ -24,8 +28,12 @@ app.set('views', './src/views'); // Seteo de la ubicación de la carpeta "views"
 // ************ WRITE YOUR CODE FROM HERE ************
 // ************ Route System require and use() ************
 const mainRouter = require('./routes/main');
-app.use('/', mainRouter);
+const productsRouter = require('./routes/products');
+const usersRouter = require('./routes/users');
 
+app.use('/', mainRouter);
+app.use('/products', productsRouter);
+app.use('/users', usersRouter);
 
 
 // ************ DON'T TOUCH FROM HERE ************

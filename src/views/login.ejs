@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LOGIN</title>
+	<link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+	<h1>LOGIN</h1>
+	<hr>
+	<nav>
+		<ul>
+			<li><a href="/">HOME</a></li>
+			<li><a href="/products">PRODUCTS</a></li>
+			<li><a href="/products/detail">DETAIL</a></li>
+			<li><a href="/users/register">REGISTER</a></li>
+			<li><a href="/users/login">LOGIN</a></li>
+		</ul>
+	</nav>
+	<main class="container">
+		<section class="row">
+			<article class="col-12 col-md-8 mx-auto">
+				<div class="card shadow">
+					<div class="card-body">
+						<form action="/admin" method="GET">
+							<div class="mb-3">
+								<label for="admin" class="form-label">ADMINISTRADOR</label>
+								<input type="text" class="form-control" id="admin" placeholder="Ingresa tu Nombre" name="admin">
+							</div>
+							<div class="mb-3">
+								<button class="btn btn-primary">INGRESAR</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</article>
+		</section>
+	</main>
+</body>
+
+</html>
